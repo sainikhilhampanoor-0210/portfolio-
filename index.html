@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0d18">
+  <meta name="description" content="Portfolio of Hampanoor Sai Nikhil — Generative AI Engineer and Python Backend Developer specializing in RAG, agentic workflows, FastAPI and Azure AI.">
+  <title>Hampanoor Sai Nikhil | Generative AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090c16;--panel:#101625;--panel2:#131d30;--text:#edf2ff;--muted:#9ba9c2;--line:rgba(160,184,225,.15);--blue:#70a7ff;--cyan:#68e0dc;--violet:#a78bfa;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:radial-gradient(ellipse at 78% 0%,rgba(66,104,190,.16),transparent 34%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(9,12,22,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.05em;font-size:1.18rem}.brand span{color:var(--cyan)}.links{display:flex;gap:27px;align-items:center;color:var(--muted);font-size:.86rem}.links a:hover,.links a.active{color:var(--text)}.nav-cta{border:1px solid rgba(112,167,255,.5);padding:9px 15px;border-radius:8px;color:var(--text)!important}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 11px;border-radius:8px}
+    .hero{padding:105px 0 100px;display:grid;grid-template-columns:1.4fr .8fr;gap:70px;align-items:center;min-height:590px}.eyebrow,.kicker{font:500 .76rem 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}.eyebrow:before{content:"";display:inline-block;width:26px;height:1px;background:var(--cyan);vertical-align:middle;margin-right:12px}.hero h1{font-size:clamp(2.8rem,6.3vw,5.35rem);line-height:1.06;letter-spacing:-.075em;margin:24px 0 20px}.hero h1 span{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.intro{font-size:1.06rem;color:var(--muted);max-width:660px;line-height:1.9}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 19px;border-radius:9px;font-weight:700;font-size:.9rem;transition:.2s;border:1px solid var(--line)}.btn.primary{background:linear-gradient(110deg,#568df0,#4bc7cb);color:#07111e;border:0}.btn:hover{transform:translateY(-3px);filter:brightness(1.08)}.hero-note{margin-top:28px;color:#7888a5;font: .76rem 'DM Mono',monospace}.hero-card{position:relative;padding:30px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(22,34,56,.92),rgba(13,19,32,.92));box-shadow:0 24px 80px rgba(0,0,0,.24);overflow:hidden}.hero-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(93,154,255,.13);filter:blur(50px);right:-40px;top:-50px}.card-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font: .72rem 'DM Mono',monospace}.status{color:var(--cyan)}.status:before{content:"";display:inline-block;width:7px;height:7px;background:var(--cyan);border-radius:50%;margin-right:8px;box-shadow:0 0 12px var(--cyan)}.code{position:relative;margin:27px 0 20px;padding:22px;border-radius:12px;background:#090f1c;border:1px solid var(--line);font: .84rem/2 'DM Mono',monospace;color:#b9c8e3}.code .key{color:#82b4ff}.code .val{color:#83e0d7}.code .comment{color:#657895}.card-bottom{display:flex;gap:9px;flex-wrap:wrap}.mini-tag{font: .68rem 'DM Mono',monospace;padding:6px 9px;border:1px solid var(--line);border-radius:6px;color:#b4c4df}
+    section{padding:88px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.065em;line-height:1.1;margin:12px 0 0}.section-head p{color:var(--muted);max-width:440px;margin:0}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}.about-copy{color:var(--muted);font-size:1rem}.about-copy p{margin:0 0 18px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.fact strong{display:block;font-size:1.15rem;color:var(--text);margin-bottom:4px}.fact span{color:var(--muted);font-size:.78rem}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-box{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.skill-box h3{font-size:.95rem;margin:0 0 15px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:7px 10px;border-radius:7px;background:rgba(112,167,255,.08);border:1px solid rgba(112,167,255,.16);font-size:.75rem;color:#c5d5f2}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{padding:24px;background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:15px;display:flex;flex-direction:column;min-height:310px;transition:.25s}.project:hover{transform:translateY(-5px);border-color:rgba(112,167,255,.42)}.project-no{font: .72rem 'DM Mono',monospace;color:var(--cyan)}.project h3{font-size:1.2rem;letter-spacing:-.03em;margin:18px 0 10px}.project p{color:var(--muted);font-size:.87rem;margin:0 0 20px}.project .chips{margin-top:auto}.project .chip{font-size:.68rem}
+    .timeline{border-left:1px solid rgba(112,167,255,.4);margin-left:8px;padding-left:30px;position:relative}.timeline:before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;background:var(--cyan);border-radius:50%;box-shadow:0 0 15px var(--cyan)}.role-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.role h3{font-size:1.25rem;margin:0}.role .company{color:var(--blue);font-weight:700;margin-top:4px}.date{font: .74rem 'DM Mono',monospace;color:var(--cyan);padding-top:5px}.role ul{padding-left:19px;color:var(--muted);font-size:.9rem}.role li{padding:4px 0}
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.edu-card{padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.edu-card h3{margin:0 0 6px;font-size:1rem}.edu-card p{margin:0;color:var(--muted);font-size:.86rem}.edu-card .kicker{margin-bottom:13px;display:block}
+    .contact{padding:54px;border:1px solid rgba(112,167,255,.24);border-radius:20px;background:radial-gradient(ellipse at 100% 0%,rgba(104,224,220,.12),transparent 45%),linear-gradient(130deg,#121d32,#0e1422)}.contact h2{font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.065em;line-height:1.12;margin:12px 0}.contact p{color:var(--muted);max-width:590px}.contact-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.contact-links a{border:1px solid var(--line);border-radius:8px;padding:11px 14px;font-size:.85rem}.contact-links a:hover{border-color:var(--cyan);color:var(--cyan)}
+    footer{padding:28px 0;color:#75839d;font-size:.76rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.mono{font-family:'DM Mono',monospace}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:36px;padding-top:78px}.hero-card{max-width:560px}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr 1fr}.about-grid{gap:25px}}
+    @media(max-width:620px){.wrap{width:min(100% - 34px,var(--max))}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px 24px;background:#0c1220;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:16px}.links.open{display:flex}.nav-cta{text-align:center}.hero{padding:65px 0 70px;min-height:unset}.hero h1{font-size:clamp(2.65rem,13vw,4.2rem)}section{padding:68px 0}.section-head{display:block}.section-head p{margin-top:16px}.about-grid,.skills-grid,.projects,.edu-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.project{min-height:260px}.contact{padding:30px 23px}.role-top{display:block}.date{margin-top:8px}.code{font-size:.72rem;padding:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#home">SN<span>.</span></a>
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-cta" href="#contact">Let's connect ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div class="reveal">
+      <div class="eyebrow">Generative AI Engineer · Bengaluru, India</div>
+      <h1>Building useful<br><span>AI experiences.</span></h1>
+      <p class="intro">I'm Hampanoor Sai Nikhil — a Python backend developer focused on Generative AI, RAG applications, agentic workflows, and scalable API services. I turn complex ideas into practical enterprise solutions.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn" href="mailto:sainikhilhampanoor@gmail.com">Get in touch ↗</a></div>
+      <div class="hero-note">4 YEARS EXPERIENCE <span style="color:#52627d"> / </span> PYTHON · FASTAPI · LLMs · AZURE AI</div>
+    </div>
+    <aside class="hero-card reveal">
+      <div class="card-top"><span>PROFILE / ENGINEER</span><span class="status">Available to connect</span></div>
+      <div class="code">
+        <div><span class="comment"># A little about my work</span></div>
+        <div><span class="key">role</span> = <span class="val">"Generative AI Engineer"</span></div>
+        <div><span class="key">backend</span> = <span class="val">["Python", "FastAPI"]</span></div>
+        <div><span class="key">ai_stack</span> = <span class="val">["RAG", "LangGraph", "LLMs"]</span></div>
+        <div><span class="key">cloud</span> = <span class="val">["Azure", "AWS"]</span></div>
+        <div><span class="key">focus</span> = <span class="val">"Building with purpose"</span></div>
+      </div>
+      <div class="card-bottom"><span class="mini-tag">AGENTIC AI</span><span class="mini-tag">VECTOR SEARCH</span><span class="mini-tag">BACKEND SYSTEMS</span></div>
+    </aside>
+  </div>
+
+  <section id="about"><div class="wrap reveal">
+    <div class="section-head"><div><div class="kicker">01 / About</div><h2>Engineering meets<br>intelligence.</h2></div><p>Backend engineering foundations, applied to the next generation of AI-powered products.</p></div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>Software Engineer with 4 years of experience building Python-based backend systems and Generative AI solutions for enterprise use cases. My work spans REST APIs with FastAPI and Flask, RAG-driven chatbot workflows, LLM integrations with vector databases, and prompt and context handling.</p>
+        <p>I've worked on agentic search and conversational AI involving ADK-based agents, retrieval pipelines, Azure Cognitive Search, ChromaDB, Milvus, and BigQuery-backed data access. I also bring hands-on experience in concurrent processing, logging, debugging, and scalable service design, with cloud exposure across Azure and AWS.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>4 Years</strong><span>Professional experience</span></div>
+        <div class="fact"><strong>Python</strong><span>Backend development</span></div>
+        <div class="fact"><strong>Generative AI</strong><span>RAG & agentic workflows</span></div>
+        <div class="fact"><strong>Bengaluru</strong><span>India</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap reveal">
+    <div class="section-head"><div><div class="kicker">02 / Toolkit</div><h2>Skills & technologies.</h2></div><p>The tools and concepts I use to build backend services and AI-powered applications.</p></div>
+    <div class="skills-grid">
+      <div class="skill-box"><h3>Programming & Data</h3><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div></div>
+      <div class="skill-box"><h3>Generative AI</h3><div class="chips"><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">Agentic Workflows</span><span class="chip">ADK Agent</span><span class="chip">MCP</span><span class="chip">Claude</span></div></div>
+      <div class="skill-box"><h3>Frameworks & APIs</h3><div class="chips"><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">SQLAlchemy</span><span class="chip">REST APIs</span><span class="chip">WebSockets</span><span class="chip">OpenAI</span><span class="chip">LangChain</span><span class="chip">LangSmith</span><span class="chip">LangGraph</span></div></div>
+      <div class="skill-box"><h3>Databases & Search</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">ChromaDB</span><span class="chip">Milvus</span><span class="chip">AlloyDB</span><span class="chip">BigQuery</span></div></div>
+      <div class="skill-box"><h3>Cloud & Platforms</h3><div class="chips"><span class="chip">Azure Functions</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Git</span><span class="chip">GitLab</span></div></div>
+      <div class="skill-box"><h3>Engineering Concepts</h3><div class="chips"><span class="chip">Semantic Search</span><span class="chip">Vector Search</span><span class="chip">Multi-step Reasoning</span><span class="chip">Multithreading</span><span class="chip">Logging & Monitoring</span></div></div>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="wrap reveal">
+    <div class="section-head"><div><div class="kicker">03 / Selected work</div><h2>Projects I've built.</h2></div><p>Enterprise-focused AI systems and conversational experiences developed at XIMAX Automation.</p></div>
+    <div class="projects">
+      <article class="project"><div class="project-no">PROJECT / 01</div><h3>ADK Agent Search</h3><p>Intelligent search agents with Python, FastAPI, and LangGraph. Built multi-step reasoning and query orchestration for product and order search, connecting Claude with enterprise retrieval systems and MCP tools.</p><div class="chips"><span class="chip">ADK</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">BigQuery</span><span class="chip">Azure</span></div></article>
+      <article class="project"><div class="project-no">PROJECT / 02</div><h3>RAG Chatbot</h3><p>Enterprise knowledge chatbot with document ingestion, embeddings, semantic search, and retrieval pipelines. Orchestrated context-aware conversations with LangGraph and integrated Claude, MCP, and Azure services.</p><div class="chips"><span class="chip">RAG</span><span class="chip">FastAPI</span><span class="chip">Vector DB</span><span class="chip">Claude</span><span class="chip">Azure AI</span></div></article>
+      <article class="project"><div class="project-no">PROJECT / 03</div><h3>Voice Assistant</h3><p>AI-powered voice assistant integrating Speech-to-Text and Text-to-Speech with Claude for conversational responses. Used LangGraph agentic workflows and MCP tool integrations, with Azure-hosted backend APIs.</p><div class="chips"><span class="chip">Speech-to-Text</span><span class="chip">Text-to-Speech</span><span class="chip">LangGraph</span><span class="chip">Claude</span><span class="chip">Azure</span></div></article>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap reveal">
+    <div class="section-head"><div><div class="kicker">04 / Career</div><h2>Professional experience.</h2></div><p>Building backend applications and Generative AI solutions for enterprise use cases.</p></div>
+    <div class="timeline"><div class="role">
+      <div class="role-top"><div><h3>System Engineer</h3><div class="company">XIMAX Automation Private Limited · Bengaluru</div></div><div class="date">OCT 2022 — PRESENT</div></div>
+      <ul>
+        <li>Developed scalable backend applications using Python, FastAPI, Flask, PostgreSQL, and MongoDB.</li>
+        <li>Designed and implemented REST APIs supporting chatbot and conversational AI platforms.</li>
+        <li>Built Retrieval-Augmented Generation (RAG) applications integrating enterprise knowledge repositories.</li>
+        <li>Developed AI Agent workflows using ADK orchestration and multi-step reasoning.</li>
+        <li>Integrated Azure Cognitive Search, ChromaDB, Milvus, and BigQuery for semantic search.</li>
+        <li>Developed Azure Functions and cloud-based backend services.</li>
+        <li>Applied prompt engineering and improved application performance through logging, monitoring, debugging, and optimisation.</li>
+      </ul>
+    </div></div>
+  </div></section>
+
+  <section id="education"><div class="wrap reveal">
+    <div class="section-head"><div><div class="kicker">05 / Background</div><h2>Education & credentials.</h2></div></div>
+    <div class="edu-grid">
+      <div class="edu-card"><span class="kicker">Education</span><h3>Bachelor of Technology</h3><p>2017 — 2021 · Puttur, Andhra Pradesh</p></div>
+      <div class="edu-card"><span class="kicker">Certification · Microsoft</span><h3>Azure AI Engineer Associate</h3><p>Microsoft</p></div>
+      <div class="edu-card"><span class="kicker">Certification · Google</span><h3>Generative AI Leader</h3><p>Google</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap reveal"><div class="contact">
+    <div class="kicker">06 / Contact</div><h2>Let's build something<br><span style="color:var(--cyan)">intelligent.</span></h2>
+    <p>Interested in Generative AI, backend engineering, or building practical AI-powered products? I'd be glad to connect.</p>
+    <div class="contact-links"><a href="mailto:sainikhilhampanoor@gmail.com">✉ sainikhilhampanoor@gmail.com</a><a href="tel:+918247216870">☎ +91 82472 16870</a><a href="https://github.com/sainikhilhampanoor-0210" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  </div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Hampanoor Sai Nikhil. Built with care.</span><span class="mono">PYTHON · AI · ENGINEERING</span></div></footer>
+<script>
+  const menu=document.getElementById('menu'),links=document.getElementById('links');
+  menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
