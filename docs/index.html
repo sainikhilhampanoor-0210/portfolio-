@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Project Lab · Hampanoor Sai Nikhil</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.mjs"></script>
+<header><a href="./">AI Project Lab</a><a href="https://github.com/sainikhilhampanoor-0210">GitHub ↗</a></header>
+<main>
+<section class="hero"><p class="eyebrow">HAMPANOOR SAI NIKHIL</p><h1>Applied AI,<br><em>in practice.</em></h1><p>Explore three browser-based demos inspired by my work in search, document retrieval, and conversational AI.</p></section>
+<nav aria-label="Projects"><a href="#search">Agentic search ↓</a><a href="#documents">Document Q&amp;A ↓</a><a href="#voice">Voice assistant ↓</a></nav>
+<section class="project" id="search">
+<div><h2>Agentic search</h2><p>Route a request to a sample catalog or order lookup. The result shows the route and applied filters.</p><p class="sample">Try “headphones under 100” or “order A1042”.</p></div>
+<form data-mode="search"><label for="search-input">Product or order query</label><div class="row"><input id="search-input" required value="headphones under 100"><button>Search</button></div><output aria-live="polite"></output></form>
+</section>
+<section class="project" id="documents">
+<div><h2>Document Q&amp;A</h2><p>Find and cite passages from a sample help center. Answers use keyword-ranked excerpts.</p><p class="sample">Try “What is the return policy?” or “How long does shipping take?”</p><details><summary>Sample documents</summary><ul id="sources"></ul></details></div>
+<form data-mode="documents"><label for="doc-input">Question about the help center</label><div class="row"><input id="doc-input" required value="What is the return policy?"><button>Ask</button></div><output aria-live="polite"></output></form>
+</section>
+<section class="project" id="voice">
+<div><h2>Voice assistant</h2><p>Ask about an order or policy, then play the reply. Try “Where is order A1042?” followed by “Check it again.”</p><p class="sample">Microphone input depends on browser support and permission. You can also type.</p></div>
+<form data-mode="voice"><label for="voice-input">Message or speech transcript</label><div class="row"><input id="voice-input" required placeholder="Where is order A1042?"><button>Send</button></div><div class="row actions"><button type="button" id="mic">Use microphone</button><button type="button" id="speak" disabled>Play reply</button></div><p role="status" id="voice-status"></p><output aria-live="polite"></output></form>
+</section>
+</main>
+<footer>Hampanoor Sai Nikhil · Demonstrations use fictional data.</footer>
+</html>

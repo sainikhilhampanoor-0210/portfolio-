@@ -19,3 +19,7 @@ Open `index.html` in a browser. The site uses HTML, CSS, and lightweight JavaScr
 ## Deploy with GitHub Pages
 
 In **Settings → Pages**, select **Deploy from a branch**, then choose **main** and **/(root)**. GitHub Pages provides the site URL after deployment.
+
+## Interactive demos
+
+The [AI Project Lab source](docs/) includes agentic search, document Q&A, and a voice assistant using fictional data. Run `python3 -m http.server --directory docs 8000` and open `http://localhost:8000` to try the demos locally.
